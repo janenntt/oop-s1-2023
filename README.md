@@ -1,2 +1,2 @@
-# oop-s1-2023
+# oop-s2-2023
 My new repository
