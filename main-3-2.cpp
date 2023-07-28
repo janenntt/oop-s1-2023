@@ -1,15 +1,9 @@
 #include <iostream>
-using namespace std;
-
-extern int median_array(int array[], int n);
-
-int main(){
-    int n; 
-    int array[7] = {1,5,3,4,2,9,6};
-    int result = median_array(array,7);
-
-    cout << "The median of the array is: " << result << endl;
-
-    return 0;
-
-} 
+extern int median_array(int array[], int n); 
+using namespace std; 
+int main()
+{
+    int a[] = {7,4,5,1,2,3,5,9,8};
+    int x = median_array(a, 9); 
+    cout <<"The median of the list is: "<< x << endl; 
+}
