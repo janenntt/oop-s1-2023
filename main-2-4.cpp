@@ -5,11 +5,7 @@ extern bool is_ascending(int array[], int n);
 
 int main(){
     
-    int array[5] = {0,0,0,0,0};
-    for(int j=0;j<5;j++){
-        cin >> array[j];
-    }
-
+    int array[5] = {1,2,3,4,5};
     int result = is_ascending(array,5);
     cout << "The elements in the array are in ascending order? " << result << endl;
 
