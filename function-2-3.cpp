@@ -2,6 +2,7 @@
 using namespace std;
 
 void two_five_nine(int array[], int n){
+    
     int count2 = 0, count5 = 0, count9 = 0;
 
     for (int i=0; i<n; i++){
@@ -21,6 +22,6 @@ void two_five_nine(int array[], int n){
         }
     }
 
-    cout << "2: " << count2 << "; 5: "  << count5 << "; 9: " << count9 << ";\n";
+    cout << "2:" << count2 << ";5:"  << count5 << ";9:" << count9 << ";\n";
 
 }
