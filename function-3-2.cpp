@@ -1,14 +1,15 @@
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
-int median_array(int array[], int n){
+int median_array(int array[],int n){
     if(n<1){
         return 0;
     }
 
-    sort(array,array+n);
+    if(n%2==0){
+        return 0;
+    }
 
-    return array[n/2];
-
+    sort(array, array + n);
+    return array[(n-1)/2];
 }

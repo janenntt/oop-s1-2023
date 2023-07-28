@@ -4,11 +4,12 @@ using namespace std;
 extern int median_array(int array[], int n);
 
 int main(){
-    int array[5] = {2,7,8,4,9};
+    int n; 
+    int array[5] = {1,5,3,4,2};
     int result = median_array(array,5);
 
-    cout << "Median of array: " << result << endl;
+    cout << "The median of the array is: " << result << endl;
 
     return 0;
 
-}
+} 
