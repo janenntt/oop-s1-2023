@@ -22,7 +22,7 @@ string addition(string binary1, string binary2){
         result += to_string(sum%2);
     }
 
-    reverse(result.begin(),result.end());
+    
     return result;
 }
 
@@ -53,7 +53,7 @@ string subtraction(string binary1, string binary2){
         result += to_string(difference);
     }
 
-    reverse(result.begin(), result.end());
+    
     return result;
 
 }
@@ -66,9 +66,9 @@ string multiplication(string binary1, string binary2){
         if(binary2[i]=='1'){
             result = addition(result,binary1);
         }
-        binary1=binary1+"0";
+        binary1=binary1 + "0";
     }
-    
+
     return result;
 
 }
