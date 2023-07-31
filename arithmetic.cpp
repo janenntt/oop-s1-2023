@@ -68,6 +68,7 @@ string multiplication(string binary1, string binary2){
         }
         binary1=binary1+"0";
     }
+    
     return result;
 
 }
