@@ -16,6 +16,6 @@ void print_binary_str(string decimal_number){
         decimal/=2;
     }
 
-    cout << "The binary representation of " << decimal_number << " is " << binary << endl;
+    cout << binary << endl;
 
 }
