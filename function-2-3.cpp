@@ -1,7 +1,8 @@
 #include <iostream>
-    
+using namespace std;
+
 bool is_array_palindrome(int integers[],int length){
-    if(length<=0){
+    if(length<1){
         return -1;
     }
 
@@ -10,13 +11,11 @@ bool is_array_palindrome(int integers[],int length){
             return false;
         }
     }
-
     return true;
-    
 }
 
 int sum_integers(int integers[], int length){
-    if(length<=0){
+    if(length<1){
         return -1;
     }
     int sum=0;
@@ -30,11 +29,11 @@ int sum_integers(int integers[], int length){
 
 
 int palindrome_sum(int integers[],int length){
-    if(length<=0){
+    if(length<1){
         return -1;
     }
 
-    if(palindrome_sum(integers,length)){
+    if(is_array_palindrome(integers,length)){
         return sum_integers(integers, length);
     } else {
         return -2;
