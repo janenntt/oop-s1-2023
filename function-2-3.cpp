@@ -3,9 +3,8 @@ using namespace std;
 
     
 bool is_array_palindrome(int integers[],int length){
-    
-    if(length<1){
-        return false;
+    if(length<=0){
+        return -1;
 
     }
 
@@ -26,6 +25,10 @@ bool is_array_palindrome(int integers[],int length){
 }
 
 int sum_integers(int integers[], int length){
+    if(length<=0){
+        return -1;
+
+    }
     int sum=0;
     for(int i=0;i<length;i++){
         sum+=integers[i];
