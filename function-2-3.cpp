@@ -1,21 +1,12 @@
 #include <iostream>
-using namespace std;
-
     
 bool is_array_palindrome(int integers[],int length){
     if(length<=0){
         return -1;
-
     }
 
     for(int i=0;i<(length/2);i++){
-        if(integers[i]>integers[length/2]){
-            return false;
-        }
-    }
-
-    for(int i=0;i<(length/2);i++){
-        if(integers[i]!=integers[length-1-i]){
+        if(integers[i]>integers[length/2]||integers[i]!=integers[length-1-i]){
             return false;
         }
     }
@@ -27,7 +18,6 @@ bool is_array_palindrome(int integers[],int length){
 int sum_integers(int integers[], int length){
     if(length<=0){
         return -1;
-
     }
     int sum=0;
     for(int i=0;i<length;i++){
