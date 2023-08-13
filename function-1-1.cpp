@@ -5,7 +5,6 @@ int *readNumbers(){
     int *numbers = new int[10];
 
     for (int i=0;i<10;i++){
-        printf("Enter number %d: ",i+1);
         cin >> numbers[i];
     }
     return numbers;
