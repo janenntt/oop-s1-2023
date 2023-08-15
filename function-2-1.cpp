@@ -4,11 +4,10 @@ using namespace std;
 void hexDigits(int *numbers, int length){
     for(int i=0;i<length;i++){
         cout << i << " " << numbers[i] << " ";
-        int num = numbers[i];
-        if(num>=0 and num <=9){
-            cout <<num<< endl;
-        } else{
-            switch(num){
+        if(numbers[i]>=0 && numbers[i]<=9){
+            cout << numbers[i];
+        } else {
+            switch(numbers[i]){
             case 10: 
                 cout << "A";
                 break;
