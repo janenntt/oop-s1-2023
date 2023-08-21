@@ -17,7 +17,7 @@ int Orchestra::get_current_number_of_members() const {
 
 bool Orchestra::has_instrument(std::string instrument) const {
     for (int i = 0; i < current_size; ++i) {
-        if (members[i].plays_instrument(instrument)) {
+        if (members[i].get_instrument(instrument)) {
             return true;
         }
     }
@@ -35,4 +35,4 @@ bool Orchestra::add_musician(const Musician& new_musician) {
         return true;
     }
     return false;
-}
+}s
