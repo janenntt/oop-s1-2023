@@ -1,25 +1,25 @@
 #ifndef ORCHESTRA_H
 #define ORCHESTRA_H
-
+#include "Musician.h"
 #include <string>
-#include "Musician.h"  // Assuming you have a Musician class defined
+using namespace std;
 
-class Orchestra {
-public:
-    Orchestra();           // default constructor
-    Orchestra(int size);   // constructor for an orchestra of given size
-    ~Orchestra();          // destructor
-
-    int get_current_number_of_members() const;
-    bool has_instrument(std::string instrument) const;
-    Musician* get_members() const;
-
-    bool add_musician(const Musician& new_musician);
-
-private:
-    int max_size;
+class Orchestra{
+private: 
     int current_size;
-    Musician* members;
+    int max_size;
+    Musician *members;
+
+public:
+    Orchestra();
+    Orchestra(int size);
+    ~Orchestra();
+
+    int get_current_number_of_members();
+    bool has_instrument(string instrument);
+    Musician *get_members();
+    bool add_musician(Musician new_musician);
+
 };
 
-#endif // ORCHESTRA_H
+#endif
