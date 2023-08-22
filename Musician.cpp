@@ -1,13 +1,13 @@
 #include "Musician.h"
+using namespace std;
+Musician::Musician() : instrument("null"), experience(0){}
 
-Musician::Musician() : instrument("null"), experience(0) {}
+Musician::Musician(string instrument, int experience): instrument(instrument), experience(experience){}
 
-Musician::Musician(std::string instrument, int experience) : instrument(instrument), experience(experience) {}
-
-std::string Musician::get_instrument() const {
+string Musician::get_instrument(){
     return instrument;
 }
 
-int Musician::get_experience() const {
+int Musician::get_experience(){
     return experience;
 }
