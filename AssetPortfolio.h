@@ -1,6 +1,5 @@
 #ifndef ASSETPORTFOLIO_H
 #define ASSETPORTFOLIO_H
-
 #include "Asset.h"
 using namespace std;
 
@@ -10,9 +9,9 @@ public:
     AssetPortfolio(int size);   
     ~AssetPortfolio();          
 
-    int get_num_assets() const;
-    bool has_asset(string product) const;
-    Asset* get_assets() const;
+    int get_num_assets();
+    bool has_asset(string product);
+    Asset* get_assets();
     bool add_asset(Asset new_asset);
 
 private:
