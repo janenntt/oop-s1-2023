@@ -1,42 +1,38 @@
-#include <string>
 #include "AssetPortfolio.h"
-#include "Asset.h"
-using namespace std;
+#include <iostream>
 
-AssetPortfolio::AssetPortfolio(): current_size(0), max_size(0), product_type(""),assets(nullptr){}
-AssetPortfolio::AssetPortfolio(int size): current_size(current_size), max_size(max_size),product_type(product_type){
+AssetPortfolio::AssetPortfolio() : capacity(0), num_assets(0), assets(nullptr) {}
+
+AssetPortfolio::AssetPortfolio(int size) : capacity(size), num_assets(0) {
     assets = new Asset[size];
 }
 
-int AssetPortfolio::get_num_assets(){
-    return current_size;
+AssetPortfolio::~AssetPortfolio() {
+    delete[] assets;
 }
 
-bool AssetPortfolio::has_asset(){
-    for(int i=0, i<current_size; i++){
-        if(assets[i].get_product_type == product_type){
+int AssetPortfolio::get_num_assets() const {
+    return num_assets;
+}
+
+bool AssetPortfolio::has_asset(std::string product) const {
+    for (int i = 0; i < num_assets; ++i) {
+        if (assets[i].get_product_type() == product) {
             return true;
         }
     }
     return false;
 }
 
-Asset *AssetPortfolio::get_assets(){
+Asset* AssetPortfolio::get_assets() const {
     return assets;
 }
 
-bool AssetPortfolio::add_asset(Asset new_asset){
-    if(current_size < max_size){
-        assets[current_size] = new_asset;
-        current_size++;
+bool AssetPortfolio::add_asset(Asset new_asset) {
+    if (num_assets < capacity) {
+        assets[num_assets] = new_asset;
+        num_assets++;
         return true;
     }
     return false;
 }
-
-
-AssetPortfolio::~AssetPortfolio(){
-    delete[] assets;
-}
-
-

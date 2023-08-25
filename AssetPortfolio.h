@@ -1,25 +1,23 @@
 #ifndef ASSETPORTFOLIO_H
 #define ASSETPORTFOLIO_H
+
 #include "Asset.h"
-#include <string>
-using namespace std;
 
-class AssetPortfolio{
-private:
-    int current_size;
-    int max_size;
-    Asset *assets;
-
+class AssetPortfolio {
 public:
-    AssetPortfolio();
-    AssetPortfolio(int size);
-    
-    int get_num_assets();
-    bool has_asset(string product);
-    Asset *get_assets();
+    AssetPortfolio();           // Default constructor capacity of zero assets
+    AssetPortfolio(int size);   // Constructor for a portfolio of given size
+    ~AssetPortfolio();          // Destructor
+
+    int get_num_assets() const;
+    bool has_asset(std::string product) const;
+    Asset* get_assets() const;
     bool add_asset(Asset new_asset);
 
-    ~AssetPortfolio(); //destructor
+private:
+    int capacity;
+    int num_assets;
+    Asset* assets;
 };
 
-#endif
+#endif // ASSETPORTFOLIO_H
