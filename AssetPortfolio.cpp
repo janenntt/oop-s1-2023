@@ -1,5 +1,6 @@
 #include "AssetPortfolio.h"
 #include <iostream>
+using namespace std;
 
 AssetPortfolio::AssetPortfolio() : capacity(0), num_assets(0), assets(nullptr) {}
 
@@ -15,7 +16,7 @@ int AssetPortfolio::get_num_assets() const {
     return num_assets;
 }
 
-bool AssetPortfolio::has_asset(std::string product) const {
+bool AssetPortfolio::has_asset(string product) const {
     for (int i = 0; i < num_assets; ++i) {
         if (assets[i].get_product_type() == product) {
             return true;

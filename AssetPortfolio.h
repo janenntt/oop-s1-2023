@@ -2,15 +2,16 @@
 #define ASSETPORTFOLIO_H
 
 #include "Asset.h"
+using namespace std;
 
 class AssetPortfolio {
 public:
-    AssetPortfolio();           // Default constructor capacity of zero assets
-    AssetPortfolio(int size);   // Constructor for a portfolio of given size
-    ~AssetPortfolio();          // Destructor
+    AssetPortfolio();           
+    AssetPortfolio(int size);   
+    ~AssetPortfolio();          
 
     int get_num_assets() const;
-    bool has_asset(std::string product) const;
+    bool has_asset(string product) const;
     Asset* get_assets() const;
     bool add_asset(Asset new_asset);
 
@@ -20,4 +21,4 @@ private:
     Asset* assets;
 };
 
-#endif // ASSETPORTFOLIO_H
+#endif 
