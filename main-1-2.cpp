@@ -10,9 +10,9 @@ int main() {
     Asset a2(9, "notes");
     Asset a3(11, "notes");
 
-    assetA.add_assets(a1);
-    assetA.add_assets(a2);
-    assetA.add_assets(a3);
+    assetA.add_asset(a1);
+    assetA.add_asset(a2);
+    assetA.add_asset(a3);
 
     cout << "Product type: " << assetA.get_name() << endl;
     cout << "Current Number of assets: " << assetA.get_num_assets() << endl;
