@@ -12,7 +12,3 @@ string Asset::get_product_type(){
 int Asset::get_value(){
     return value;
 }
-
-Asset::~Asset(){
-    delete[];
-}

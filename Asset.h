@@ -15,7 +15,6 @@ public:
     string get_product_type();
     int get_value();
 
-    ~Asset();
 
 };
 
