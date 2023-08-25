@@ -8,8 +8,8 @@ public:
     Asset();  
     Asset(int value, string product_type);  
 
-    string get_product_type() const; 
-    int get_value() const;  
+    string get_product_type(); 
+    int get_value();  
 
     ~Asset();
 
