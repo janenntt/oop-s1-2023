@@ -1,25 +1,21 @@
 #ifndef ASSET_H
 #define ASSET_H
+
 #include <string>
-using namespace std;
 
-class Asset{
-private:
-    string product_type;
-    int value;
-
+class Asset {
 public:
-    Asset();
-    Asset(string product_type, int value);
+    Asset();  // Default constructor
+    Asset(int value, std::string product_type);  // Parameterized constructor
 
-    string get_product_type();
-    int get_value();
+    std::string get_product_type() const;  // Getter for product type
+    int get_value() const;  // Getter for asset value
 
+    ~Asset();  // Destructor
+
+private:
+    int value;
+    std::string product_type;
 };
 
-#endif
-
-
-
-
-
+#endif // ASSET_H
