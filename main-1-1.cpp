@@ -4,11 +4,9 @@
 using namespace std;
 
 int main(){
-    //Wizard(name,health,damage,mana)
-    Wizard wizard("Gandalf", 100, 20, 50);
+    Wizard wizard("Gandalf", 100, 20, 50); //(name,health,damage,mana)
     
-    //Warrior(name,health,damage,weapon)
-    Warrior warrior("Aragorn", 120, 25, "sword");
+    Warrior warrior("Aragorn", 120, 25, "sword"); //(name,health,damage,weapon)
 
     cout << "Let the battle begin!" << endl;
 
