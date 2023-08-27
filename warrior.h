@@ -5,9 +5,9 @@
 
 class Warrior : public Player{
     private:
-        string weapon;
+        std::string weapon;
     public:
-    Warrior(string name, int health, int damage, string weapon);
+    Warrior(std::string name, int health, int damage, std::string weapon);
     void swingWeapon(Player* opponent);
 };
 

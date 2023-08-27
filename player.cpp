@@ -1,7 +1,17 @@
+#include <iostream>
 #include "player.h"
 #include <string>
+using namespace std;
 
-Player::Player(string name, int health, int damage): name(""),health(health), damage(damage){}
+Player::Player(string name, int health, int damage): name(name),health(health), damage(damage){}
+
+std::string Player::getName() const {
+    return name;
+}
+
+int Player::getHealth() const {
+    return health;
+}
 
 void Player::attack(Player* opponent, int damage){
     opponent -> takeDamage(damage);
@@ -9,15 +19,7 @@ void Player::attack(Player* opponent, int damage){
 
 void Player::takeDamage(int damage){
     health -= damage;
-    cout << name << "takes" << damage << "damage. Remaining health: " << health << "\n";
-}
-
-string Player::getName() const {
-    return name;
-}
-
-int Player::getHealth() const {
-    return health;
+    std::cout << name << " takes " << damage << " damage. Remaining health: " << health << "\n";
 }
 
 void Player::setHealth(int remaining_health){
