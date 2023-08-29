@@ -12,13 +12,13 @@ ParkingLot::~ParkingLot() {
     delete[] vehicles;
 }
 
-int ParkingLot::getCount() const {
+int ParkingLot::getCount(){
     return vehicleCount;
 }
 
 void ParkingLot::parkVehicle(Vehicle* vehicle) {
     if (vehicleCount < maxCapacity) {
-        vehicles[vehicleCount] = vehicle;
+        vehicles[vehicleCount] = vehicle; //check
         vehicleCount++;
         std::cout << "Vehicle parked. Current count: " << vehicleCount << std::endl;
     } else {
@@ -26,12 +26,12 @@ void ParkingLot::parkVehicle(Vehicle* vehicle) {
     }
 }
 
-void ParkingLot::unparkVehicle(int vehicleID) {
+void ParkingLot::unparkVehicle(int ID) {
     for (int i = 0; i < vehicleCount; ++i) {
         if (vehicles[i]->get_ID() == ID) {
             delete vehicles[i];
-            vehicles[i] = vehicles[vehicleCount - 1];
-            --vehicleCount;
+            vehicles[i] = vehicles[i+1];
+            vehicleCount--;
             std::cout << "Vehicle with ID " << ID << " has been unparked." << std::endl;
             return;
         } else {
@@ -41,7 +41,7 @@ void ParkingLot::unparkVehicle(int vehicleID) {
     
 }
 
-int ParkingLot::countOverstayingVehicles(int maxParkingDuration) const {
+int ParkingLot::countOverstayingVehicles(int maxParkingDuration){
     int overstayingCount = 0;
     std::time_t currentTime = std::time(nullptr);
 
@@ -50,6 +50,5 @@ int ParkingLot::countOverstayingVehicles(int maxParkingDuration) const {
             overstayingCount++;
         }
     }
-
     return overstayingCount;
 }

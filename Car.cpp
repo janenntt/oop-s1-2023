@@ -3,6 +3,6 @@
 Car::Car(int ID): Vehicle(ID){}
 
 
-int Car::getParkingDuration() const {
+int Car::getParkingDuration(){
     return int(Vehicle::getParkingDuration()*0.9);
 }

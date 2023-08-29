@@ -12,7 +12,7 @@ class Vehicle{
     
     int get_ID() const; 
 
-    virtual int getParkingDuration() const;
+    virtual int getParkingDuration();
 };
 
 #endif

@@ -7,7 +7,7 @@ class Car : public Vehicle{
     
     Car(int ID);
 
-    int getParkingDuration() const override;
+    int getParkingDuration();
 
 };
 

@@ -7,7 +7,7 @@
 int main() {
     ParkingLot parkingLot(10);
 
-    while (true) {
+    while (true){
         int choice;
         std::cout << "Enter vehicle type (1 for Car, 2 for Bus, 3 for Motorbike): ";
         std::cin >> choice;

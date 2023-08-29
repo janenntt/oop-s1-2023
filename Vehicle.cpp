@@ -10,7 +10,7 @@ int Vehicle::get_ID() const {
     return ID;
 }
 
-int Vehicle::getParkingDuration() const {
+int Vehicle::getParkingDuration(){
     std::time_t current_time = std::time(nullptr);
     return static_cast<int> (std::difftime(current_time, timeOfEntry));
 }

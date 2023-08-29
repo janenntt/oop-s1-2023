@@ -3,43 +3,48 @@
 #include "Car.h"
 #include "Bus.h"
 #include "Motorbike.h"
+using namespace std;
 
-int main() {
+int main(){
     ParkingLot parkingLot(10);
-
-    while (true) {
-        int choice;
-        std::cout << "Enter vehicle type (1 for Car, 2 for Bus, 3 for Motorbike): ";
-        std::cin >> choice;
-
-        if (choice < 1 || choice > 3) {
-            std::cout << "Invalid choice. Exiting." << std::endl;
-            break;
-        }
+    int ID;
+    while (parkingLot.getCount()<=10) {
+        int type;
+        cout << "Enter type of vehicle (1-Car, 2-Bus, 3-Motorbike): ";
+        cin >> type;
 
         Vehicle* newVehicle;
-
-        if (choice == 1) {
-            newVehicle = new Car(parkingLot.getCount() + 1);
-        } else if (choice == 2) {
-            newVehicle = new Bus(parkingLot.getCount() + 1);
-        } else {
-            newVehicle = new Motorbike(parkingLot.getCount() + 1);
+        
+        if (type == 1) {
+            cout << "Enter ID: ";
+            cin >> ID;
+            newVehicle = new Car(ID);
+            parkingLot.vehicleCount += 1;
+        } else if (type == 2) {
+            cout << "Enter ID: ";
+            cin >> ID;
+            newVehicle = new Bus(ID);
+            parkingLot.vehicleCount += 1;
+        } else if (type == 3) {
+            cout << "Enter ID: ";
+            cin >> ID;
+            newVehicle = new Motorbike(ID);
+            parkingLot.vehicleCount += 1;
         }
 
         parkingLot.parkVehicle(newVehicle);
 
         if (parkingLot.getCount() == parkingLot.getCount()) {
-            std::cout << "Parking lot is full." << std::endl;
+            cout << "Parking lot is full." << endl;
             break;
         }
     }
 
-    int unparkID;
+    
     std::cout << "Enter ID of vehicle to unpark: ";
-    std::cin >> unparkID;
+    std::cin >> ID;
 
-    parkingLot.unparkVehicle(unparkID);
+    parkingLot.unparkVehicle(ID);
 
     return 0;
 }

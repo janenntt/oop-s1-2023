@@ -2,6 +2,6 @@
 
 Motorbike::Motorbike(int ID): Vehicle(ID){}
 
-int Motorbike::getParkingDuration() const {
+int Motorbike::getParkingDuration(){
     return int(Vehicle::getParkingDuration()*0.85);
 }
