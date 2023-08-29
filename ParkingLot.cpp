@@ -1,8 +1,12 @@
 #include "ParkingLot.h"
+#include "Vehicle.h"
 #include <iostream>
 
 ParkingLot::ParkingLot(int capacity) : maxCapacity(capacity), vehicleCount(0) {
     vehicles = new Vehicle*[maxCapacity];
+    for(int i=0;i<maxCapacity;i++){
+        vehicles[i]=nullptr;
+    }
 }
 
 ParkingLot::~ParkingLot() {
@@ -25,17 +29,21 @@ void ParkingLot::parkVehicle(Vehicle* vehicle) {
     }
 }
 
-void ParkingLot::unparkVehicle(int unparked_ID) {
+void ParkingLot::unparkVehicle(int vehicleID) {
     for (int i = 0; i < vehicleCount; ++i) {
-        if (vehicles[i]->get_ID() == unparked_ID) {
+        if (vehicles[i]->get_ID() == vehicleID) {
             delete vehicles[i];
-            vehicles[i] = vehicles[i+1];
+            vehicles[i]=nullptr;
+            for(int j=i;j<vehicleCount-1;j++){
+                vehicles[j]=vehicles[j+1];
+            }
+            vehicles[vehicleCount-1]=nullptr;
             vehicleCount--;
             return;
-        } else {
-            std::cout << "Vehicle not in the lot." << std::endl;
-        }
+        }  
+        
     }
+    std::cout << "Vehicle not in the lot" << std::endl;
     
 }
 
