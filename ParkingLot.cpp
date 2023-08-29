@@ -21,7 +21,7 @@ void ParkingLot::parkVehicle(Vehicle* vehicle) {
         vehicles[vehicleCount] = vehicle; //check
         vehicleCount++;
     } else {
-        std::cout << "The lot is full." << std::endl;
+        std::cout << "The lot is full" << std::endl;
     }
 }
 
