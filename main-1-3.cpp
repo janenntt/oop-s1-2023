@@ -12,11 +12,6 @@ int main() {
         std::cout << "Enter vehicle type (1 for Car, 2 for Bus, 3 for Motorbike): ";
         std::cin >> choice;
 
-        if (choice < 1 || choice > 3) {
-            std::cout << "Invalid choice. Exiting." << std::endl;
-            break;
-        }
-
         Vehicle* newVehicle;
 
         if (choice == 1) {

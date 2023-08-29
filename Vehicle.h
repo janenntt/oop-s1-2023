@@ -3,11 +3,10 @@
 #include <ctime>
 
 class Vehicle{
-    protected:
-        std::time_t timeOfEntry;
-        int ID;
-    
-    public: 
+    public:
+    std::time_t timeOfEntry;
+    int ID;
+
     Vehicle();
     Vehicle(int ID);
     
