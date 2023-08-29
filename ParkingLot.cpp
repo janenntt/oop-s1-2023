@@ -33,11 +33,9 @@ void ParkingLot::unparkVehicle(int vehicleID) {
             --vehicleCount;
             std::cout << "Vehicle with ID " << vehicleID << " has been unparked." << std::endl;
             return;
-        } else {
-            std::cout << "Vehicle not in the lot." << std::endl;
         }
     }
-    
+    std::cout << "Vehicle not in the lot." << std::endl;
 }
 
 int ParkingLot::countOverstayingVehicles(int maxParkingDuration) const {
