@@ -25,9 +25,9 @@ void ParkingLot::parkVehicle(Vehicle* vehicle) {
     }
 }
 
-void ParkingLot::unparkVehicle(int ID) {
+void ParkingLot::unparkVehicle(int unparked_ID) {
     for (int i = 0; i < vehicleCount; ++i) {
-        if (vehicles[i]->get_ID() == ID) {
+        if (vehicles[i]->get_ID() == unparked_ID) {
             delete vehicles[i];
             vehicles[i] = vehicles[i+1];
             vehicleCount--;
