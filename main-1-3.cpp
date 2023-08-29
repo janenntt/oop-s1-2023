@@ -28,18 +28,12 @@ int main() {
         }
 
         parkingLot.parkVehicle(newVehicle);
-
-        if (parkingLot.getCount() == parkingLot.getCount()) {
-            std::cout << "Parking lot is full." << std::endl;
-            break;
-        }
     }
 
-    int unparkID;
-    std::cout << "Enter ID of vehicle to unpark: ";
-    std::cin >> unparkID;
+    int maxParkingDuration = 15; // in seconds
+    int overstayingCount = parkingLot.countOverstayingVehicles(maxParkingDuration);
 
-    parkingLot.unparkVehicle(unparkID);
+    std::cout << "Number of overstaying vehicles: " << overstayingCount << std::endl;
 
     return 0;
 }
