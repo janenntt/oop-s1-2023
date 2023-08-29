@@ -20,7 +20,6 @@ void ParkingLot::parkVehicle(Vehicle* vehicle) {
     if (vehicleCount < maxCapacity) {
         vehicles[vehicleCount] = vehicle; //check
         vehicleCount++;
-        std::cout << "Vehicle parked. Current count: " << vehicleCount << std::endl;
     } else {
         std::cout << "The lot is full." << std::endl;
     }
@@ -32,7 +31,6 @@ void ParkingLot::unparkVehicle(int ID) {
             delete vehicles[i];
             vehicles[i] = vehicles[i+1];
             vehicleCount--;
-            std::cout << "Vehicle with ID " << ID << " has been unparked." << std::endl;
             return;
         } else {
             std::cout << "Vehicle not in the lot." << std::endl;
