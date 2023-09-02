@@ -1,42 +1,22 @@
 #include <iostream>
-#include "Vehicle.h"
-#include "Car.h"
-#include "Bus.h"
-#include "Motorbike.h"
+#include "Appliance.h"
 using namespace std;
 
 int main(){
-    int num_cars, num_buses, num_motorbikes;
-    cout << "Number of cars:  " << endl;
-    cin >> num_cars;
-    cout << "Number of buses: " << endl;
-    cin >> num_buses;
-    cout << "Number of motorbikes: " << endl;
-    cin >> num_motorbikes;
+    Appliance fridge(500);
+    Appliance tv(100);
 
-    int total_vehicles = num_cars + num_buses + num_motorbikes;
-    Vehicle* vehicles[total_vehicles];
+    cout << "Power rating of fridge is: " << fridge.get_powerRating() << endl;
+    cout << "Power rating of TV is: " << tv.get_powerRating() << endl;
 
-    for(int i=0;i<num_cars;i++){
-        vehicles[i]=new Car(i+1);
-    }
+    fridge.turnOn();
+    tv.turnOn();
 
-    for(int i=0;i<num_buses;i++){
-        vehicles[num_cars+i]=new Bus(i+1);
-    }
+    cout << "Is the fridge turned on (1 - Yes, 0 - No)? " << fridge.isTurnedOn() << endl;
+    cout << "Is the TV turned on (1 - Yes, 0 - No)? " << tv.isTurnedOn() << endl;
 
-    for(int i=0;i<num_motorbikes;i++){
-        vehicles[num_cars+num_buses+i]=new Motorbike(i+1);
-    }
-
-    for (int i=0;i<total_vehicles;i++){
-        cout << "Vehicle: " << vehicles[i]->get_ID() << endl;
-        cout << "Parking duration: " << vehicles[i]->getParkingDuration() << " seconds" << endl;
-
-        delete vehicles[i];
-    }
-
-
-
+    cout << "Power consumption of fridge: " << fridge.getPowerConsumption() << endl;
+    cout << "Power consumption of TV: " << tv.getPowerConsumption() << endl; 
+ 
     return 0;
 }
