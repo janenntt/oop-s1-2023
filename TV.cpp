@@ -9,7 +9,7 @@ double TV::get_ScreenSize() const {
     return screenSize;
 }
 
-void TV::set_ScreenSize(double screenSize){
+void TV::set_ScreenSize(double new_screenSize){
     screenSize = new_screenSize;
 }
 
