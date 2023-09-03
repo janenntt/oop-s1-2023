@@ -10,8 +10,8 @@ class TV : public Appliance {
 
         double screenSize;
 
-        double get_ScreenSize() const ;
-        void set_ScreenSize(double new_screenSize);
+        double getScreenSize() const ;
+        void setScreenSize(double new_screenSize);
 
         double getPowerConsumption();
 };
