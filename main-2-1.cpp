@@ -7,7 +7,7 @@ using namespace std;
 int main(){
     Fridge samsung(500,100.0); 
 
-    cout << "Power rating of the fridge: " << samsung.set_powerRating() << " Watts" << endl;
+    cout << "Power rating of the fridge: " << samsung.get_powerRating() << " Watts" << endl;
     cout << "Volume of the fridge: " << samsung.getVolume() << " litres" << endl;
 
     samsung.turnOn();
