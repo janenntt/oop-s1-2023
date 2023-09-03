@@ -10,8 +10,8 @@ class Appliance{
         Appliance(); //set the power rating to 0 and isOn attribute to false
         Appliance(int powerRating); //creates an Appliance with a power rating
 
-        
-        int set_powerRating() const;
+        int get_powerRating() const;
+        int set_powerRating(new_powerRating);
         bool get_isOn();
         
 
