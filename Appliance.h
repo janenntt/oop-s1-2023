@@ -11,7 +11,7 @@ class Appliance{
         Appliance(int powerRating); //creates an Appliance with a power rating
 
         int get_powerRating() const;
-        int set_powerRating(new_powerRating);
+        void set_powerRating(int new_powerRating);
         bool get_isOn();
         
 

@@ -7,7 +7,7 @@ Appliance::Appliance(int powerRating): powerRating(powerRating), isOn(false) {}
 int Appliance::get_powerRating() const {
     return powerRating;
 }
-int Appliance::set_powerRating(new_powerRating){
+int Appliance::set_powerRating(int new_powerRating){
     powerRating = new_powerRating;
 }
 
