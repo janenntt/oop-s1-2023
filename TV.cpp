@@ -6,11 +6,11 @@ TV::TV() : screenSize(0.0){}
 TV::TV(int powerRating, double screenSize) : Appliance(powerRating), screenSize(screenSize){};
 
 double TV::get_ScreenSize() const {
-    screenSize = new_screenSize;
+    return screenSize;
 }
 
 void TV::set_ScreenSize(double screenSize){
-
+    screenSize = new_screenSize;
 }
 
 
