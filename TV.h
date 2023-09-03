@@ -1,6 +1,8 @@
 #ifndef TV_H
 #define TV_H
 
+#include "Appliance.h"
+
 class TV : public Appliance {
     public:
         TV();
@@ -8,8 +10,8 @@ class TV : public Appliance {
 
         double screenSize;
 
-        void setScreenSize(double screenSize);
-        double getScreenSize() const ;
+        double get_ScreenSize() const ;
+        void set_ScreenSize(double new_screenSize);
 
         double getPowerConsumption();
 };
