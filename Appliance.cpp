@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Appliance.h"
 
 Appliance::Appliance() : powerRating(0), isOn(false){}
@@ -21,5 +22,6 @@ void Appliance::turnOff(){
 }
 
 double Appliance::getPowerConsumption(){
+
     return 0.0;
 }
