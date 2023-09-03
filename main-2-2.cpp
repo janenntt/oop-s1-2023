@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(){
-    TV myTV(300, 40); 
+    TV myTV(100, 50); 
 
     cout << "Power rating of the TV is: " << myTV.set_powerRating() << " Watts" << endl;
     cout << "Screen size of the TV is: " << myTV.getScreenSize() << " inches" << endl;
