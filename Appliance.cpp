@@ -5,11 +5,11 @@ Appliance::Appliance() : powerRating(0), isOn(false){}
 Appliance::Appliance(int powerRating): powerRating(powerRating), isOn(false) {}
 
 
-int Appliance::get_powerRating() const {
+int Appliance::set_powerRating() const {
     return powerRating;
 }
 
-bool Appliance::isTurnedOn(){
+bool Appliance::get_isOn(){
     return isOn;
 }
 
