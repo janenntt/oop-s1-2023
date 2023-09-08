@@ -12,8 +12,6 @@ class Helicopter:public AirVehicle{
 
         string get_name() const;
 
-        void set_name(string new_name);
-
 };
 
 #endif

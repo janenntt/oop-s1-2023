@@ -2,14 +2,10 @@
 #include "Helicopter.h"
 #include <iostream>
 #include <string>
-Helicopter::Helicopter(int weight, string name) : weight(weight), name(name){}
+Helicopter::Helicopter(int w, string n) : weight(weight), name(name){}
 
 string Helicopter::get_name() const{
     return name;
-}
-
-void Helicopter::set_name(string new_name){
-    name = new_name;
 }
 
 void Helicopter::fly(int headwind, int minutes){
