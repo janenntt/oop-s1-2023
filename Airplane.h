@@ -1,19 +1,18 @@
 #ifndef AIRPLANE_H
 #define AIRPLANE_H
+#include <iostream>
 #include "AirVehicle.h"
+#include <string> 
+using namespace std;
+class Airplane: public AirVehicle{
+    public: 
+    int numPassengers;
+    Airplane(); 
+    Airplane(int w, int p); 
+    int get_numPassengers(); 
+    void reducePassengers(int x); 
+    void fly(int headwind, int minutes); 
 
-class Airplane:public AirVehicle{
-    public:
-        Airplane();
-        Airplane(int weight, int numPassengers);
-
-        int numPassengers; // numbers of passengers on the plane
-
-        void reducePassengers(int x); //reduce passenger list by x
-        int get_numPassengers();
-
-        void fly(int headwind, int minutes);
 
 };
-
 #endif
