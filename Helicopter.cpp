@@ -1,38 +1,31 @@
-#include "AirVehicle.h"
-#include "Helicopter.h"
-#include <iostream>
-#include <string>
-using namespace std;
-Helicopter::Helicopter(int w, string n) : weight(weight), name(name){}
-
-string Helicopter::get_name() const{
-    return name;
-}
+#include "Helicopter.h"  
+Helicopter::Helicopter(){
+    this->fuel = get_fuel(); 
+    this->numberOfFlights = 0;
+}; 
+Helicopter::Helicopter(int w, string n){
+    this->fuel = get_fuel(); 
+    this->numberOfFlights = 0;
+    this->weight = w; 
+    this->name = n; 
+}; 
+string Helicopter::get_name(){
+    return this->name; 
+}; 
 void Helicopter::set_name(string n){
-    name = n;
-}
-
+    this->name = n; 
+}; 
 void Helicopter::fly(int headwind, int minutes){
-    int fuel1 = fuel;
-    if(weight > 5670){
-        if(headwind<40){
-            fuel1 -= (0.18*minutes + 0.01*(weight-5670)*minutes);
-        } else {
-            fuel1 -= (0.4*minutes + 0.01*(weight-5670)*minutes);
-        }
-    } else {
-        if(headwind<40){
-            fuel1 -= 0.18*minutes;
-        } else {
-            fuel1 -= 0.4*minutes;
+    if (headwind > 0){
+        if (headwind >= 40){
+          this->fuel -= 0.4*minutes; 
+        } 
+        else{
+        this->fuel -= 0.18*minutes; 
         }
     }
-
-    if(fuel1 < 0.2*fuel){
-        numberOfFlights = numberOfFlights;
-        fuel = fuel1;
-    } else {
-        numberOfFlights += 1;
-        fuel = fuel1;
+    if (this->weight > 5670){
+        this->fuel  -= (this->weight-5670)*0.01*minutes; 
     }
+    this->numberOfFlights += 1;
 }

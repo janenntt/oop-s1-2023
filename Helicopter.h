@@ -1,19 +1,17 @@
 #ifndef HELICOPTER_H
 #define HELICOPTER_H
+#include <iostream>
 #include "AirVehicle.h"
-#include <string>
+#include <string> 
 using namespace std;
-
-class Helicopter:public AirVehicle{
-    public:
-        Helicopter(int w, string n); //create a helicopter with weight w and string n
-
-        string name;
-        void fly (int headwind, int minutes);
-
-        string get_name() const;
-        void set_name(string n);
+class Helicopter: public AirVehicle{
+    public: 
+    string name;
+    Helicopter(); 
+    Helicopter(int w, string n); 
+    string get_name(); 
+    void set_name(string n); 
+    void fly(int headwind, int minutes); 
 
 };
-
 #endif

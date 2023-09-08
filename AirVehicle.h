@@ -1,26 +1,23 @@
 #ifndef AIRVEHICLE_H
 #define AIRVEHICLE_H
-
+#include <iostream> 
+#include <string> 
 class AirVehicle{
+    protected: 
+    int weight; 
+    float fuel;
+
     public:
-        AirVehicle();
-        AirVehicle(int weight); 
-
-        int weight;
-        float fuel;
-        int numberOfFlights;
-
-        int get_weight() const;
-        void set_weight(int weight);
-
-        float get_fuel() const;
-        void set_fuel(float new_fuel);
-
-        int get_numberOfFlights() const;
-        void set_numberOfFlights(int new_numberOfFlights);
-
-        void refuel();
-        virtual void fly(int headwind,int minutes); //headwind in km/h and minutes (time flying)
-};
-
+    int numberOfFlights;  
+    AirVehicle(); 
+    AirVehicle(int w); 
+    int get_weight(); 
+    void set_weight(int w);
+    float get_fuel(); 
+    void set_fuel(float f); 
+    void refuel(); 
+    int get_numberOfFlights(); 
+    void set_numberOfFlights(int k); 
+    virtual void fly(int headwind, int minutes); 
+}; 
 #endif
