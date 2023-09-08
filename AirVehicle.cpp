@@ -1,7 +1,7 @@
 #include "AirVehicle.h"
 
 AirVehicle::AirVehicle() : weight(0){}
-AirVehicle::AirVehicle(int weight) : weight(weight){}
+AirVehicle::AirVehicle(int w) : weight(w){}
 
 int AirVehicle::get_weight() const{
     return weight;

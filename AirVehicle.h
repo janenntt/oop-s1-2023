@@ -4,7 +4,7 @@
 class AirVehicle{
     public:
         AirVehicle();
-        AirVehicle(int weight); 
+        AirVehicle(int w); 
 
         int weight;
         float fuel;
