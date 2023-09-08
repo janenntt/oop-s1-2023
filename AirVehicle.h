@@ -4,14 +4,14 @@
 class AirVehicle{
     public:
         AirVehicle();
-        AirVehicle(int w); 
+        AirVehicle(int weight); 
 
         int weight;
         float fuel;
         int numberOfFlights;
 
         int get_weight() const;
-        void set_weight(int w);
+        void set_weight(int weight);
 
         float get_fuel() const;
         void set_fuel(float new_fuel);
