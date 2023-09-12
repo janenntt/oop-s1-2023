@@ -2,6 +2,8 @@
 #include <string>
 using namespace std;
 #include "Person.h"
+#include "Instructor.h"
+#include "Student.h"
 
 Course::Course(int id, string name){
     this->id=id;
@@ -19,5 +21,5 @@ void Course::add_student(Student* student){
 }
 
 void Course::add_instructor(Instructor* instructor){
-    
+
 }

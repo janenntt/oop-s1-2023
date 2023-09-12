@@ -5,13 +5,13 @@ using namespace std;
 #include "Course.h"
 
 class University{
-    public:
+    private:
         string name;
         string location;
         Course* courses;
         int course_count;
 
-        
+    public:
         University(string name,string location);
         ~University();
         void addCourse(int id, string name);

@@ -4,9 +4,9 @@
 using namespace std;
 
 class Person{
-    public:
+    private:
         string name;
-
+    public:
         Person(string name);
 
 };

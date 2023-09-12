@@ -14,6 +14,4 @@ University::~University(){
     delete[] courses;
 }
 
-void University::addCourse(int id, string name){
-    Course* new_course = new Course(id,name);
-}
+void University::addCourse(int id, string name){}

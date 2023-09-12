@@ -7,16 +7,15 @@ using namespace std;
 #include "Instructor.h"
 
 class Course{
-    public:
+    private:
         string name;
         int id;
         Person** persons;
         int count_person;
-
+    public:
         Course(int id, string name);
         ~Course();
         void add_student(Student* student);
         void add_instructor(Instructor* instructor);
-        void addPerson();
 };
 #endif
