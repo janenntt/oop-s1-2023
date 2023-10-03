@@ -9,7 +9,7 @@ class Invoice {
         int dollarsOwed; // the total amount owed in dollars for service
 
     public:
-        Invoice(invoiceId);
+        Invoice(string invoiceId);
         void addServiceCost(int costDollars);
         int getDollarsOwed();
         string getInvoiceId();

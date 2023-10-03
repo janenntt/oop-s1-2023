@@ -1,6 +1,6 @@
 #include "Invoice.h"
 
-Invoice::Invoice(invoiceId){
+Invoice::Invoice(string invoiceId){
     this->invoiceId = invoiceId;
 }
 
