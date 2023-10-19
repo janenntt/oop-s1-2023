@@ -10,7 +10,9 @@ class GameEntity{
     public:
         GameEntity(int x, int y, char type); // constructor
         std::tuple <int,int> getPos(); // returns the position of the entity
+        void setPosition(std::tuple <int,int> position);
         char getType(); // returns the type of the entity
+        void setType(char type);
         
 };
 #endif
