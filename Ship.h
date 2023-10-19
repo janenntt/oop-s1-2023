@@ -4,7 +4,7 @@
 
 class Ship : public GameEntity {
     public:
+        Ship(int x, int y);
         void move(int dx, int dy); // change the ship's position
-        Ship(int x, int y, char 'S');
 };
 #endif
