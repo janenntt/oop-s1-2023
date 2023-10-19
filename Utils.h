@@ -2,7 +2,6 @@
 #define UTILS_H
 #include <tuple>
 #include <stdlib.h>
-#include <ctime>
 #include <cmath>
 
 class Utils {

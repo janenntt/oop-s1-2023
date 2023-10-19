@@ -4,7 +4,8 @@
 
 class Mine : public GameEntity {
     public:
-        Mine(int x, int y, 'M');
-        
+        Mine(int x, int y, char 'M');
+        Explosion* explode();
+
 };
 #endif

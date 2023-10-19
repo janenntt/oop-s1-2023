@@ -7,3 +7,12 @@ std::vector<GameEntity*> Game::get_entities(){
 void Game::set_entities(std::vector<GameEntity*> entities){
     this -> std::vector<GameEntity*> entities = std::vector<GameEntity*> entities;
 }
+
+std::vector<GameEntity*> Game::initGame(int numShips, int numMines, int gridWidth, int gridHeight){
+
+}
+
+void Game::gameLoop(int maxIterations, double mineDsistanceThreshold){
+
+}
+

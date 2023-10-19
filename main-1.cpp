@@ -14,8 +14,8 @@ int main(){
 
     double distance = Utils::calculateDistance(pos1,pos2);
 
-    std::cout << "Entity 1: Position (" << std::get<0>(pos1) << " , " << std::get<1>(pos1) << "), Type: " << player1.getType() << std::endl;
-    std::cout << "Entity 2: Position (" << std::get<0>(pos1) << " , " << std::get<1>(pos2) << "), Type: " << player2.getType() << std::endl;
+    std::cout << "Entity 1: Position (" << std::get<0>(pos1) << ", " << std::get<1>(pos1) << "), Type: " << player1.getType() << std::endl;
+    std::cout << "Entity 2: Position (" << std::get<0>(pos1) << ", " << std::get<1>(pos2) << "), Type: " << player2.getType() << std::endl;
     std::cout << "Euclidean distance between the two players: " << distance << std::endl;
 
     // generate some random positions and calculate distances between them

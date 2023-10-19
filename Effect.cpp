@@ -1,5 +1,3 @@
 #include "Effect.h"
 
-void Effect::apply(GameEntity& entity){
-    
-}
+void Effect::apply(GameEntity& entity){}
