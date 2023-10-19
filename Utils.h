@@ -1,7 +1,7 @@
 #ifndef UTILS_H
 #define UTILS_H
 #include <tuple>
-#include <cstdlib.h>
+#include <cstdlib>
 #include <cmath>
 
 class Utils {
