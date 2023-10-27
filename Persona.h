@@ -2,7 +2,6 @@
 #define PERSONA_H
 #include "Spot.h"
 
-
 class Persona : public Spot {
     private:
 
