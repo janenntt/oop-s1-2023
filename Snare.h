@@ -14,7 +14,7 @@ class Snare : public Spot, public Influence {
         }
         void implement(Spot& spot){
             spot.setCategory('S');
-            spot.isOperative() = false;
+            isOperative() = false;
         }
 };
 #endif
