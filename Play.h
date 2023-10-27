@@ -3,7 +3,7 @@
 #include "Snare.h"
 #include "Persona.h"
 #include "Assists.h"
-using namespace std;
+#include <vector>
 class Play{
     private: 
     int _gridWidth;
@@ -19,26 +19,26 @@ class Play{
         for (int i = 0; i < numPersonas; i++){
             tuple<int, int> loc = Assists::createRandomLoc(matrixWidth, matrixHeight);
             Spot *a = new Persona(get<0>(loc), get<1>(loc));
-            matrix.push_back(a);
+            this->matrix.push_back(a);
         }
         for (int i = 0; i < numSnares; i++){
             tuple<int, int> loc = Assists::createRandomLoc(matrixWidth, matrixHeight);
             Spot *a = new Snare(get<0>(loc), get<1>(loc));
-            matrix.push_back(a);
+            this->matrix.push_back(a);
         }
     }
     void playCycle(int maxCycles, double snareTriggerDistance){
         bool is_win = false;
         for (int i = 0; i < maxCycles; i++) { 
-            for (int k = 0; k < matrix.size(); k++){
+            for (int k = 0; k < this->matrix.size(); k++){
                 if (matrix[k]->getCategory() == 'P'){
                     Persona *persona = static_cast<Persona*>(matrix[k]);
                     persona->shift(1, 0);
                 }
             }
 
-            for(int k = 0; k < matrix.size(); k++){
-                for (int l = 0; l < matrix.size(); l++){
+            for(int k = 0; k < this->matrix.size(); k++){
+                for (int l = 0; l < this->matrix.size(); l++){
                     if (matrix[k]->getCategory() == 'S' && matrix[l]->getCategory() == 'P'){
                         Persona *persona = static_cast<Persona*>(matrix[l]);  
                         Snare *snare = static_cast<Snare*>(matrix[k]); 
@@ -48,8 +48,7 @@ class Play{
                         }
                     }
                 }
-            }
-            // Avatar = Persona 
+            } 
             for (int j = 0; j < matrix.size(); j++){
                 if (matrix[j]->getCategory() == 'P'){
                     Persona *persona = static_cast<Persona*>(matrix[j]);
