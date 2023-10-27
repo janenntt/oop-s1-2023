@@ -11,18 +11,19 @@ class Spot{
     Spot(int x, int y, char category):category(category){
         location = make_tuple(x, y);
     }
+
     std::tuple<int, int> getLoc(){
-        return this->location;
+        return location;
     }
     char getCategory(){
-        return this->category;
+        return category;
     }
     void setLoc(int x, int y){
         get<0>(location) = x;
         get<1>(location) = y;
     }
-    void setCategory(char category){
-        this->category = category;
+    void setCategory(char _category){
+        category = _category;
     }
 
 };
